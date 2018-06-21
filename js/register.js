@@ -16,7 +16,7 @@ function registeruser(e) {
 			"Accept":"application/json",
 			"Content-type":"application/json"
 		},
-		body: JSON.stringify({first_name:fast_name,last_name:last_name, email:email, password:password})
+		body: JSON.stringify({first_name:first_name,last_name:last_name, email:email, password:password})
 	})	
 	.then((res) => res.json())
 	.then((data) => console.log(data))
