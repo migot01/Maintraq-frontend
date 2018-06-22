@@ -1,11 +1,11 @@
 // Add event listener
-document.getElementById('register').addEventListener('click', register);
+document.getElementById('register').addEventListener('click', registeruser);
 
 // register a user
 function registeruser(e) {
 	e.preventDefault();
 
-    let first_name= document.getElementById('first_name').value;
+    let first_name= document.getElementById('First_name').value;
     let last_name= document.getElementById('last_name').value;
 	let email = document.getElementById('email').value;
 	let password = document.getElementById('password').value;
