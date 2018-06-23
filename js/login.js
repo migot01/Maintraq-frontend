@@ -16,5 +16,5 @@ function loginUser(e) {
 		body: JSON.stringify({email:email, password:password})
 	})	
 	.then((res) => res.json())
-	.then((data) => console.log(data))
+	.then((data) => localStorage.setItem('auth-token', data.auth_token)) 
 }
