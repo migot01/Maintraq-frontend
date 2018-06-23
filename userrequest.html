@@ -32,29 +32,29 @@
                         <div class="form-container">
                             <h1>Request Form</h1>
                             <hr>
-                            <label for="requestdate"><b>Request Date:</b></label>
-                            <input type="datetime" placeholder="Date of request creation" name="requestdate" required>
+                            
                             &nbsp;
                             &nbsp;
-                            <label for="requester"><b>Requesting Party:</b></label>
-                            <input type="text" placeholder="Enter requesters name" name="requester" required>
+                            <label for="title"><b>Title</b></label>
+                            <input type="text" id="title" placeholder="Enter request title" name="title" required>
                             <br>
                             <br>
                             <label for="location"><b>Work location:</b></label>
-                            <input type="text" placeholder="Enter work location" name="location" required>
+                            <input type="text" id="location" placeholder="Enter work location" name="location" required>
                             <br>
                             <br>
-                            <label for="description"><b>Description of work or repair:</b></label>
-                            <textarea id="description" name="description" placeholder="Describe work/repair.." 
+                            <label for="body"><b>Description of work or repair:</b></label>
+                            <textarea id="body" name="body" placeholder="Describe work/repair.." 
                             style="height:200px" required></textarea>
                             <br>
                         </div>
                         <div>
-                            <button type="submit" class="requestbtn">Create Request</button>
+                            <input type="button" value="Submit" id="submitRequest">
                         </div>
                     </form1>
                 </div>
             </div>
+            <script src="js/create_request.js"></script>
         <footer>
             <div class="container">
             <p>Maintraq, Copyright &copy; 2017</p>
