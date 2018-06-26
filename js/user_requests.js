@@ -14,7 +14,6 @@ function UserRequestsList() {
 			let table = document.getElementById('requests');
 			
 			i = 1
-			console.log(table);
 			
 			if (typeof table !== "undefined" && table !== null) {
 					let row = table.insertRow(i);
@@ -27,7 +26,7 @@ function UserRequestsList() {
 					
 				
 				
-					id.innerHTML ="<a href='user_view_a_request.html '>"+request.id+"</a>";
+					id.innerHTML ="<a>"+request.id+"</a>";
 					title.innerHTML = request.title;
 					location.innerHTML = request.location;
 					body.innerHTML = request.body;
@@ -38,8 +37,9 @@ function UserRequestsList() {
 				
 			} 
 
-			function viewRequest() {
-				fetch('http://127.0.0.1:5000/api/v2/users/requests/'+(request.id), {
+			function viewRequest(e) {
+				e.preventDefault();
+				fetch('http://127.0.0.1:5000/api/v2/users/requests/'+request.id, {
 					method: 'GET',
 					headers:{
 						"Accept":"application/json",
@@ -49,13 +49,13 @@ function UserRequestsList() {
 				})
 				.then((res) => res.json())
 				.then((data) => {
-					/*console.log(data.id);*/
+					console.log('Hello');
 					localStorage.setItem('id', data.id);
 					localStorage.setItem('title', data.title);
 					localStorage.setItem('location', data.location);
 					localStorage.setItem('body', data.body);
 					localStorage.setItem('status', data.status);
-					location.assign('user_view_a_request.html');
+					location.href='user_view_a_request.html';
 				})
 			}
 			
