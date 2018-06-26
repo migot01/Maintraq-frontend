@@ -9,7 +9,7 @@
     <title>Maintenance Tracker | Register</title>
      <link rel="stylesheet" href="./CSS/style.css">
     </head>
-    <body onload="UserRequestsList()">
+    <body onload="getRequest()">
         <header> 
                 <nav>
                     
@@ -21,36 +21,31 @@
                         <li><a href="userrequest_list.html">Request list</a></li>
                         <li><a href="adminresponserequest.html">Admin Response</a></li>
                         <li><a href="adminpage.html">Admin Page</a></li>
-                        <li><a href="user_view_a_request.html">user Page</a></li>
                   </ul>
                 </nav>
            
         </header>
         
-            <section id="catalog" >
-                <div class="container">
-                <h2>User Requests list</h2>
-                <table id="requests" >
-                    <tr>
-                        <th>Request ID</th>
-                        <th>Request Title</th>
-                        <th>Work Location</th>
-                        <th>Body</th>
-                        <th>Status</th>
-                    </tr>
-                    <!-- Insert user requests -->
-                   
-                    	
-                </table>
-                                </div>
-                                
-                                
-                                    </section>
+        <div class="form-container">
+            <h2 id="req-title"></h2>
+            <p id="req-location"></p>
+            <p id="req-body"></p>
+            <p id="req-status"></p>
+            
+            <br>
+            <form action="">
+                
+                <div class="clearfix">
+                    <input type="button" id="edit"  value="Edit request">
+                    <input type="button" id="delete"  value="Delete request">
+                </div>    
+            </form>
+        </div>
         <footer>
             <div class="container">
             <p>Maintraq, Copyright &copy; 2017</p>
                         </div>
         </footer>
-        <script src="js/user_requests.js"></script>
+        <script src="js/user_view_a_req.js"></script>
     </body>
 </html>
