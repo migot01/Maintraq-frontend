@@ -9,7 +9,7 @@
     <title>Maintenance Tracker | Register</title>
      <link rel="stylesheet" href="./CSS/style.css">
     </head>
-    <body>
+    <body onload="getRequest()">
         <header> 
                 <nav>
                     
@@ -27,48 +27,29 @@
         </header>
         <div id="container">
                  
-            <div class="sign-up">
-                <table >
-                    <tr>
-                        <td><h1>Title Of The Request</h1></td>
-                    </tr>
-                    <tr>
-                        <td>"Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                    </tr>
-                    <tr>
-                            <td>Date</td>
-                    </tr>
-                </table>
-                <form1 action="#" class="orm-container">
-                    <textarea type="text" placeholder="Feedback" required></textarea>
-                    <br/>
-                    <select class="type-select" name="type">
-                        <option value="choose-type" value="null">Select One Option</option>
-                        <option  class="others" value="repair">Resolve</option>
-                        <option  class="others" value="maintenance">Approve</option>
-                        <option  class="others" value="maintenance">Disapprove</option>
-                    </select>
-                    <br/>
-                    <div>
-                        <button type="submit" class="requestbtn">Submit</button>
-                    </div>
-                  
-                </form1>
+            <div class="form-container">
+                <h2 id="req-title"></h2>
+                <p id="req-location"></p>
+                <p id="req-body"></p>
+                <p id="req-status"></p>
                 
+                <br>
+                <form action="">
+                    
+                    <div class="clearfix">
+                        <input type="submit" id="approve" value="Approve">
+                        <input type="submit" id="reject" value="Reject">
+                        <input type="submit" id="resolve" value="Resolve">
+                    </div>      
+                </form>
             </div>
         </div>
     
-       
-
+        <footer>
+            <div class="container">
+            <p>Maintraq, Copyright &copy; 2017</p>
+                        </div>
+        </footer>
+        <script src="js/admin_view_request.js"></script>
     </body>
 </html>
