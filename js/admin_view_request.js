@@ -35,7 +35,14 @@ function approveRequest(e) {
         }
 	})
 	.then((res) => res.json())
-	.then((data) => console.log(data))
+	.then((data) => {
+		console.log(data)
+		alert(data.message);
+		if (data.message === "Request approved successfully")
+		{
+			window.location.assign('adminpage.html');
+		}
+	})
 }
 
 // disapprove request
@@ -51,7 +58,15 @@ function disapproveRequest(e) {
         }
 	})
 	.then((res) => res.json())
-	.then((data) => console.log(data))
+	.then((data) => {
+		console.log(data)
+		alert(data.message);
+		if (data.message === "Request rejected successfully")
+		{
+			window.location.assign('adminpage.html');
+		}
+	})
+
 }
 
 // resolve request
@@ -67,5 +82,12 @@ function resolveRequest(e) {
         }
 	})
 	.then((res) => res.json())
-	.then((data) => console.log(data))
+	.then((data) => {
+		console.log(data)
+		alert(data.message);
+		if (data.message === "Request resolved successfully")
+		{
+			window.location.assign('adminpage.html');
+		}
+	})
 }
