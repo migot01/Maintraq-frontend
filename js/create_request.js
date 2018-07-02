@@ -21,5 +21,12 @@ function createRequest(e) {
 							  body:body})
 	})
 	.then ((res) => res.json())
-	.then ((data) => console.log(data))
+	.then ((data) => {
+		console.log(data)
+		alert(data.message)
+		if (data.message === "Created successfully")
+		{
+			window.location.assign('userrequest_list.html');
+		}
+	})
 }

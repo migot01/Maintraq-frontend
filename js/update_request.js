@@ -21,6 +21,7 @@ function updateRequest(e) {
 	let body = document.getElementById("req-body").value;
 
 	let req_id = localStorage.getItem('id');
+	
 
 
 		fetch ('http://127.0.0.1:5000/api/v2/users/requests/'+req_id, {
@@ -34,6 +35,13 @@ function updateRequest(e) {
                 body:body})
 		})
 		.then((res) => res.json())
-		.then((data) => console.log(data))
+		.then((data) => {
+			console.log(data)
+			alert(data.message);
+			if (data.message ==="request updated!")
+			{
+				window.location.assign('userrequest_list.html');
+			}
+		})
 	
 }

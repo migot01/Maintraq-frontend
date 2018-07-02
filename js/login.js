@@ -16,5 +16,21 @@ function loginUser(e) {
 		body: JSON.stringify({email:email, password:password})
 	})	
 	.then((res) => res.json())
-	.then((data) => localStorage.setItem('auth-token', data.auth_token)) 
+	.then((data) => {
+        console.log(data);
+        if (data.message === 'Login successful') {
+            localStorage.setItem('auth-token', data.auth_token);
+            console.log(data)
+            if (data.role === 1) {
+                
+                location.href="adminpage.html"; 
+            }
+            else {
+                location.href="userrequest_list.html"; 
+            }             
+        }
+        else {
+            alert(data.message);
+        }    
+    })     
 }
