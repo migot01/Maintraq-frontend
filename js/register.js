@@ -19,5 +19,13 @@ function registeruser(e) {
 		body: JSON.stringify({first_name:first_name,last_name:last_name, email:email, password:password})
 	})	
 	.then((res) => res.json())
-	.then((data) => console.log(data))
+	.then((data) => {
+		console.log(data)
+		alert(data.message);
+		if (data.message ==="User created!")
+		{
+			window.location.assign('login.html');
+		}
+	})
+
 }
