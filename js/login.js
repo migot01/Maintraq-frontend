@@ -1,5 +1,5 @@
 
-API_PREFIX = 'https://maintraqa.herokuapp.com'
+//API_PREFIX = 'https://maintraqa.herokuapp.com'
 // Add event listener
 document.getElementById('login').addEventListener('click', loginUser);
 
@@ -9,7 +9,7 @@ function loginUser(e) {
 	let email = document.getElementById('email').value;
 	let password = document.getElementById('password').value;
 
-	fetch (API_PREFIX+'/api/v2/auth/login', {
+	fetch ('http://127.0.0.1:5000/api/v2/auth/login', {
 		method: 'POST',
 		headers: {
 			"Accept":"application/json",

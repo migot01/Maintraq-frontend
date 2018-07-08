@@ -11,29 +11,23 @@
     </head>
     <body onload="getRequest() ">
         <header> 
-                <nav>
+            <navbar>
                     
-                    <ul class="active">
-                        <li ><a class="current" href="index.html">Home</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="userrequest.html">Create request</a></li>
-                        <li><a href="userrequest_list.html">Request list</a></li>
-                        <li><a href="adminresponserequest.html">Admin Response</a></li>
-                        <li><a href="adminpage.html">Admin Page</a></li>
-                  </ul>
-                </nav>
+                <a href="index.html" id="navbrand">Maintenance Tracker</a>
+            </navbar>
            
         </header>
-        <div class="card">
-            <div class="container1">
+        <div >
+            <div class="container">
         
-        <h1>Update request:</h1>
+        <h1 id="admin">Update request:</h1>
         
         <label for="req-title"><b>Title: </b></label>
+        <br>
         <textarea id="req-title" name="description" style="height:45px"></textarea>
         <br>
         <label for="req-location"><b>Location: </b></label>
+        <br>
         <textarea id="req-location" name="description" style="height:50px"></textarea>
         <br>
         <label for="description"><b>Request Description:</b></label>
@@ -42,6 +36,7 @@
         <form action="">
             <div class="clearfix">
                 <input type="button" id="save"  value="Save changes">
+                <a href="userrequest_list.html"><input type="button" value="Back" id="back"></a>
             </div>    
         </form>
     </div>
