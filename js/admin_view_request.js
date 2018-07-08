@@ -1,3 +1,4 @@
+API_PREFIX = 'https://maintraqa.herokuapp.com'
 function getRequest() {	
     request_id = localStorage.getItem('id')
 
@@ -27,7 +28,7 @@ function getRequest() {
 function approveRequest(e) {
 	e.preventDefault();
 
-	fetch('http://127.0.0.1:5000/api/v2/requests/'+request_id+'/approve', {
+	fetch(API_PREFIX +'/api/v2/requests/'+request_id+'/approve', {
 		method: "PUT",
 		headers: {
             "Accept":"application/json",
@@ -50,7 +51,7 @@ function approveRequest(e) {
 function disapproveRequest(e) {
 	e.preventDefault();
 
-	fetch('http://127.0.0.1:5000/api/v2/requests/'+request_id+'/disapprove', {
+	fetch(API_PREFIX+'/api/v2/requests/'+request_id+'/disapprove', {
 		method: "PUT",
 		headers: {
             "Accept":"application/json",
@@ -74,7 +75,7 @@ function disapproveRequest(e) {
 function resolveRequest(e) {
 	e.preventDefault();
 
-	fetch('http://127.0.0.1:5000/api/v2/requests/'+request_id+'/resolve', {
+	fetch(API_PREFIX+'/api/v2/requests/'+request_id+'/resolve', {
 		method: "PUT",
 		headers: {
             "Accept":"application/json",

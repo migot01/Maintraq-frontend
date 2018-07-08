@@ -1,5 +1,5 @@
 //add eventlistener
-
+API_PREFIX = 'https://maintraqa.herokuapp.com'
 document.getElementById("submitRequest").addEventListener('click', createRequest);
 
 // Create request function
@@ -10,7 +10,7 @@ function createRequest(e) {
 	let location = document.getElementById("location").value;
 	let body = document.getElementById("body").value;
 
-	fetch ('http://127.0.0.1:5000/api/v2/Auth/request', {
+	fetch (API_PREFIX+'/api/v2/Auth/request', {
 		method: 'POST',
 		headers: {
 			"Accept":"application/json",

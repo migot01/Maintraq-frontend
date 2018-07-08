@@ -1,3 +1,4 @@
+API_PREFIX = 'https://maintraqa.herokuapp.com'
 function getRequest() {	
 	let title = localStorage.getItem('title')
 	document.getElementById('req-title').innerHTML = title ;
@@ -24,7 +25,7 @@ function updateRequest(e) {
 	
 
 
-		fetch ('http://127.0.0.1:5000/api/v2/users/requests/'+req_id, {
+		fetch (API_PREFIX+'/api/v2/users/requests/'+req_id, {
 			method: 'PUT',
 			headers:  {
                 "Accept":"application/json",

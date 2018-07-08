@@ -1,5 +1,6 @@
+API_PREFIX = 'https://maintraqa.herokuapp.com'
 function UserRequestsList() {
-	fetch('http://127.0.0.1:5000/api/v2/users/requests', {
+	fetch(API_PREFIX +'/api/v2/users/requests', {
 		method: 'GET',
 		headers: {
             "Accept":"application/json",
@@ -39,7 +40,7 @@ function UserRequestsList() {
 
 			function viewRequest(e) {
 				e.preventDefault();
-				fetch('http://127.0.0.1:5000/api/v2/users/requests/'+request.id, {
+				fetch(API_PREFIX +'/api/v2/users/requests/'+request.id, {
 					method: 'GET',
 					headers:{
 						"Accept":"application/json",

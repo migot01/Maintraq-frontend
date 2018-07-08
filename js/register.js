@@ -1,4 +1,5 @@
 // Add event listener
+API_PREFIX = 'https://maintraqa.herokuapp.com'
 document.getElementById('register').addEventListener('click', registeruser);
 
 // register a user
@@ -10,7 +11,7 @@ function registeruser(e) {
 	let email = document.getElementById('email').value;
 	let password = document.getElementById('password').value;
 
-	fetch ('http://127.0.0.1:5000/api/v2/auth/register', {
+	fetch (API_PREFIX+'/api/v2/auth/register', {
 		method: 'POST',
 		headers: {
 			"Accept":"application/json",
