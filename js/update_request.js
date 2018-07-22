@@ -1,4 +1,4 @@
-API_PREFIX = 'https://maintraqa.herokuapp.com'
+API_PREFIX = 'http://127.0.0.1:5000'
 function getRequest() {	
 	let title = localStorage.getItem('title')
 	document.getElementById('req-title').innerHTML = title ;
@@ -39,7 +39,7 @@ function updateRequest(e) {
 		.then((data) => {
 			console.log(data)
 			alert(data.message);
-			if (data.message ==="request updated!")
+			if (data.message != "Please fill all fields")
 			{
 				window.location.assign('userrequest_list.html');
 			}

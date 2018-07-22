@@ -1,5 +1,5 @@
 //add eventlistener
-API_PREFIX = 'https://maintraqa.herokuapp.com'
+API_PREFIX = 'http://127.0.0.1:5000'
 document.getElementById("submitRequest").addEventListener('click', createRequest);
 
 // Create request function
@@ -24,7 +24,8 @@ function createRequest(e) {
 	.then ((data) => {
 		console.log(data)
 		alert(data.message)
-		if (data.message === "Created successfully")
+		
+		if (data.message != "Please fill all fields")
 		{
 			window.location.assign('userrequest_list.html');
 		}

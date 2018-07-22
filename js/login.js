@@ -1,5 +1,5 @@
 
-API_PREFIX = 'https://maintraqa.herokuapp.com'
+API_PREFIX = 'http://127.0.0.1:5000'
 // Add event listener
 document.getElementById('login').addEventListener('click', loginUser);
 
@@ -33,6 +33,7 @@ function loginUser(e) {
         }
         else {
             alert(data.message);
-        }    
+        } 
+           
     })     
 }

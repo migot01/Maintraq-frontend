@@ -1,4 +1,4 @@
-API_PREFIX = 'https://maintraqa.herokuapp.com'
+API_PREFIX = 'http://127.0.0.1:5000'
 function getRequest() {	
     request_id = localStorage.getItem('id')
 

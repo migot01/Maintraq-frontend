@@ -1,5 +1,5 @@
 // Add event listener
-API_PREFIX = 'https://maintraqa.herokuapp.com'
+API_PREFIX = 'http://127.0.0.1:5000'
 document.getElementById('register').addEventListener('click', registeruser);
 
 // register a user
@@ -19,14 +19,20 @@ function registeruser(e) {
 		},
 		body: JSON.stringify({first_name:first_name,last_name:last_name, email:email, password:password})
 	})	
+	
 	.then((res) => res.json())
 	.then((data) => {
 		console.log(data)
 		alert(data.message);
+		if (email === "" && password === ""){
+			window.location.assign('login.html');
+		}
 		if (data.message ==="User created!")
 		{
 			window.location.assign('login.html');
 		}
 	})
+	
 
 }
+
